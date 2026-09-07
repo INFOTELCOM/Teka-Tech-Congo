@@ -1,0 +1,15 @@
+{
+  "name": "TekaTech Congo",
+  "short_name": "TekaTech",
+  "description": "Support IT, réseaux, vidéosurveillance et solutions digitales à Brazzaville.",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F5F8FC",
+  "theme_color": "#123A73",
+  "lang": "fr",
+  "icons": [
+    { "src": "assets/favicon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/favicon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

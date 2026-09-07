@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<script>
+(function(){
+  try{
+    var seen = sessionStorage.getItem('tekatech_intro_seen') === '1';
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.documentElement.classList.add(seen || reduced ? 'no-intro' : 'is-loading');
+  }catch(e){}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espace client — TekaTech Congo</title>
+<meta name="description" content="L'espace client TekaTech Congo arrive bientôt : suivi des interventions, devis et factures en un seul endroit. Inscrivez-vous pour être averti à l'ouverture.">
+<link rel="canonical" href="https://tekatechcongo.cg/espace-client.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TekaTech Congo">
+<meta property="og:title" content="Espace client — TekaTech Congo">
+<meta property="og:description" content="Suivi des interventions, devis et factures en un seul endroit. Bientôt disponible.">
+<meta property="og:image" content="assets/logo.png">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#123A73">
+</head>
+<body>
+
+<div id="preloader" class="preloader" role="status" aria-live="polite" aria-label="Chargement du site TekaTech Congo">
+  <div class="preloader-grid" aria-hidden="true"></div>
+  <div class="preloader-inner">
+    <div class="preloader-mark">
+      <svg class="preloader-ring" viewBox="0 0 200 200" aria-hidden="true">
+        <defs>
+          <linearGradient id="preloaderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:var(--flag-green)"/>
+            <stop offset="35%" style="stop-color:var(--flag-yellow)"/>
+            <stop offset="68%" style="stop-color:var(--flag-red)"/>
+            <stop offset="100%" style="stop-color:var(--brand-2)"/>
+          </linearGradient>
+        </defs>
+        <circle class="preloader-ring-track" cx="100" cy="100" r="88"></circle>
+        <circle id="preloader-ring-fill" class="preloader-ring-fill" cx="100" cy="100" r="88"></circle>
+      </svg>
+      <div class="preloader-logo-clip">
+        <img src="assets/favicon-512.png" alt="" class="preloader-logo">
+      </div>
+    </div>
+    <div class="preloader-bars" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <p class="preloader-status" id="preloader-status">Connexion au réseau…</p>
+    <div class="preloader-pct" id="preloader-pct" aria-hidden="true">0%</div>
+  </div>
+  <button type="button" class="preloader-skip" id="preloader-skip">Passer l'intro</button>
+</div>
+
+<div class="flagbar" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="TekaTech Congo" class="brand-logo">
+    </a>
+    <nav class="main-nav">
+      <a href="index.html#services">Services</a>
+      <a href="calculateur-devis.html">Devis express</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="applications.html">Applications</a>
+      <a href="faq.html">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary btn-small" href="index.html#contact">Signaler un problème</a>
+  </div>
+</header>
+
+<main>
+  <section class="service-hero">
+    <div class="wrap service-hero-inner">
+      <div class="reveal">
+        <span class="carousel-tag">Espace client</span>
+        <h1>Suivez vos interventions en un seul endroit.</h1>
+        <p class="hero-sub">L'espace client TekaTech Congo est en préparation : historique des interventions, devis, factures et contrats récurrents, accessibles à tout moment. En attendant, notre équipe reste joignable directement par téléphone, WhatsApp ou e-mail.</p>
+        <div class="hero-actions">
+          <a href="index.html#contact" class="btn btn-primary">Nous contacter maintenant</a>
+        </div>
+      </div>
+
+      <div class="dashboard-preview reveal" aria-hidden="true">
+        <div class="dashboard-lockbadge">Bientôt disponible</div>
+        <div class="dashboard-mock">
+          <div class="dashboard-mock-row">
+            <div class="dashboard-mock-card">
+              <span class="dashboard-mock-label">Intervention en cours</span>
+              <strong>Réseaux &amp; Wi-Fi</strong>
+              <span class="dashboard-mock-status">Diagnostic envoyé</span>
+            </div>
+            <div class="dashboard-mock-card">
+              <span class="dashboard-mock-label">Prochain rendez-vous</span>
+              <strong>Vidéosurveillance</strong>
+              <span class="dashboard-mock-status">À planifier</span>
+            </div>
+          </div>
+          <div class="dashboard-mock-row">
+            <div class="dashboard-mock-card wide">
+              <span class="dashboard-mock-label">Historique</span>
+              <div class="dashboard-mock-line"></div>
+              <div class="dashboard-mock-line short"></div>
+              <div class="dashboard-mock-line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-includes">
+    <div class="wrap">
+      <h2 class="reveal">Ce que l'espace client permettra</h2>
+      <ul class="check-list reveal">
+        <li><span class="check-dot"></span>Historique complet de vos interventions et comptes-rendus</li>
+        <li><span class="check-dot"></span>Devis et factures consultables à tout moment</li>
+        <li><span class="check-dot"></span>Suivi des contrats récurrents et de leur échéance</li>
+        <li><span class="check-dot"></span>Nouvelle demande d'intervention en quelques clics</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="wrap">
+      <h2 class="reveal">Ce que ça donnera concrètement</h2>
+      <p class="section-sub reveal">Un aperçu de l'esprit de l'espace client : simple à consulter, accessible depuis un ordinateur comme un téléphone.</p>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item reveal gallery-span-2">
+          <img src="assets/training.jpg" alt="Formateur accompagnant une stagiaire sur poste informatique" loading="lazy">
+          <figcaption>Un accompagnement pas à pas</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Woman%20using%20computer.jpg" alt="Personne consultant son suivi d'interventions sur ordinateur" loading="lazy">
+          <figcaption>Votre historique en ligne</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Man%20with%20smartphone%20and%20laptop%20%28Unsplash%29.jpg" alt="Personne consultant son suivi depuis son téléphone" loading="lazy">
+          <figcaption>Accessible depuis votre téléphone</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Technician_with_laptop_working_on_server_rack_at_NERSC.jpg" alt="Technicien joignable pour le suivi des interventions" loading="lazy">
+          <figcaption>Une équipe toujours joignable</figcaption>
+        </figure>
+        <figure class="gallery-item reveal gallery-span-2">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/PDC_server_room.jpg" alt="Infrastructure réseau suivie dans le temps" loading="lazy">
+          <figcaption>Une vue claire sur votre infrastructure</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="carousel-section reveal">
+    <div class="wrap">
+      <h2>Ce que vous pourrez faire, une fois connecté</h2>
+      <div class="carousel" id="carousel" role="region" aria-label="Fonctionnalités de l'espace client" aria-roledescription="carrousel">
+        <div class="carousel-track" id="carousel-track">
+          <article class="carousel-slide">
+            <span class="carousel-tag">Historique</span>
+            <h3>Toutes vos interventions en un clin d'œil</h3>
+            <p>Retrouvez chaque passage de notre équipe, avec le compte-rendu associé, sans avoir à fouiller vos e-mails.</p>
+          </article>
+          <article class="carousel-slide">
+            <span class="carousel-tag">Devis &amp; factures</span>
+            <h3>Vos documents centralisés</h3>
+            <p>Devis, factures et échéances de contrats consultables à tout moment, au même endroit.</p>
+          </article>
+          <article class="carousel-slide">
+            <span class="carousel-tag">Nouvelle demande</span>
+            <h3>Une intervention en quelques clics</h3>
+            <p>Plus besoin de repartir de zéro : décrivez le nouveau besoin directement depuis votre espace.</p>
+          </article>
+          <article class="carousel-slide">
+            <span class="carousel-tag">Contrats récurrents</span>
+            <h3>Une échéance qui ne vous échappe plus</h3>
+            <p>Visualisez la durée restante de vos contrats et anticipez leur renouvellement.</p>
+          </article>
+        </div>
+        <button class="carousel-arrow carousel-prev" aria-label="Diapositive précédente" type="button">‹</button>
+        <button class="carousel-arrow carousel-next" aria-label="Diapositive suivante" type="button">›</button>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-cta reveal">
+    <div class="wrap contact-inner">
+      <div class="contact-copy">
+        <h2>Être averti à l'ouverture</h2>
+        <p>Laissez votre e-mail : nous vous préviendrons dès que l'espace client sera disponible, sans engagement.</p>
+      </div>
+      <form class="contact-form" id="notify-form">
+        <input type="hidden" name="access_key" value="1574d137-6488-4e03-b780-bb582f50d283">
+        <input type="hidden" name="subject" value="Inscription espace client — TekaTech Congo">
+        <input type="hidden" name="from_name" value="Site TekaTech Congo">
+        <input type="checkbox" name="botcheck" class="hidden-field" style="display:none" tabindex="-1" autocomplete="off">
+        <label>
+          Nom de l'organisation
+          <input type="text" name="organisation" required>
+        </label>
+        <label>
+          E-mail ou téléphone
+          <input type="text" name="contact_info" required>
+        </label>
+        <button type="submit" class="btn btn-primary">
+          <span class="btn-label">Me prévenir</span>
+          <span class="btn-spinner" aria-hidden="true"></span>
+        </button>
+        <p class="form-status" id="notify-status" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="reveal">
+      <img src="assets/logo.png" alt="TekaTech Congo" class="footer-logo">
+      <p>Produit numérique stratégique d'<a href="https://infotelcom-congo-brazzaville.netlify.app/" target="_blank" rel="noopener" class="brand-link">INFOTELCOM</a>.<br>Brazzaville, République du Congo.</p>
+      <p class="footer-contact">
+        (+242) 06 849 87 92 · (+242) 06 866 08 21<br>
+        contact.infotelcom@gmail.com
+      </p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h4>Services</h4>
+        <a href="support-it.html">Support IT</a>
+        <a href="reseaux-wifi.html">Réseaux &amp; Wi-Fi</a>
+        <a href="videosurveillance.html">Vidéosurveillance</a>
+        <a href="solutions-digitales.html">Solutions digitales</a>
+        <a href="calculateur-devis.html">Devis express</a>
+      </div>
+      <div>
+        <h4>Entreprise</h4>
+        <a href="a-propos.html">À propos</a>
+        <a href="actualites.html">Actualités</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div>
+        <h4>Assistance</h4>
+        <a href="index.html#galerie">Galerie</a>
+        <a href="index.html#comment">Comment ça marche</a>
+        <a href="index.html#pourquoi">Pourquoi nous</a>
+        <a href="espace-client.html">Espace client</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 <a href="https://infotelcom-congo-brazzaville.netlify.app/" target="_blank" rel="noopener" class="brand-link">INFOTELCOM</a> — TekaTech Congo. Tous droits réservés.</span>
+    <span class="footer-legal-links"><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
+  </div>
+</footer>
+
+<a href="https://wa.me/33652861159" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Nous écrire sur WhatsApp">
+  <span class="whatsapp-fab-ring"></span>
+  <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true">
+    <path d="M16 3C9 3 3.3 8.7 3.3 15.7c0 2.5.7 4.8 1.9 6.8L3 29l6.7-2.1c1.9 1 4.1 1.6 6.3 1.6 7 0 12.7-5.7 12.7-12.7C28.7 8.7 23 3 16 3zm0 23.1c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.2 1.2-3.9-.3-.4a10.3 10.3 0 0 1-1.6-5.6C5.3 9.9 10.1 5.1 16 5.1S26.7 9.9 26.7 15.8 21.9 26.1 16 26.1zm5.8-7.7c-.3-.2-1.9-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6 0-.2-.7-1.8-1-2.4-.3-.6-.5-.5-.7-.6h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.2 3.4 5.4 4.7.8.3 1.4.5 1.8.7.8.2 1.5.2 2 .1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.1-.2-.3-.3-.6-.4z"/>
+  </svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
