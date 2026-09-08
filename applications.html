@@ -25,9 +25,7 @@
 .app-card h2{margin:0 0 8px;font-size:1.55rem}.app-card p{margin:0 0 15px;line-height:1.65;color:#526071}
 .app-meta{display:flex;flex-wrap:wrap;gap:9px}.app-meta span{padding:7px 11px;border-radius:999px;background:#f1f5fa;font-size:.86rem;font-weight:700;color:#34465d}
 .download-box{text-align:center}.download-box small{display:block;margin-top:10px;color:#697789;max-width:240px}
-.manuals-title{margin:65px 0 24px;font-size:2rem}.manual-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.manual-card{background:#fff;border:1px solid rgba(18,58,115,.12);border-radius:20px;padding:28px;box-shadow:0 14px 35px rgba(18,58,115,.06)}.manual-card h3{margin:0 0 10px}.manual-card p{color:#526071;line-height:1.6}.manual-card .btn{margin-top:10px}@media(max-width:700px){.manual-grid{grid-template-columns:1fr}}
-.apps-note{margin-top:30px;padding:22px 24px;border-left:4px solid var(--flag-green);background:#f7fbf8;border-radius:10px;color:#46566b;line-height:1.65}
-@media(max-width:800px){.app-card{grid-template-columns:1fr;padding:25px}.download-box{text-align:left}.download-box .btn{width:100%}}
+.manuals-title{margin:65px 0 24px;font-size:2rem}.manual-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.manual-card{background:#fff;border:1px solid rgba(18,58,115,.12);border-radius:20px;padding:28px;box-shadow:0 14px 35px rgba(18,58,115,.06)}.manual-card h3{margin:0 0 10px}.manual-card p{color:#526071;line-height:1.6}.manual-card .btn{margin-top:10px}.apps-note{margin-top:30px;padding:22px 24px;border-left:4px solid var(--flag-green);background:#f7fbf8;border-radius:10px;color:#46566b;line-height:1.65}@media(max-width:700px){.manual-grid{grid-template-columns:1fr}}@media(max-width:800px){.app-card{grid-template-columns:1fr;padding:25px}.download-box{text-align:left}.download-box .btn{width:100%}}
 </style>
 </head>
 <body>
@@ -36,75 +34,24 @@
   <div class="wrap header-inner">
     <a class="brand" href="index.html"><img src="assets/logo.png" alt="TekaTech Congo" class="brand-logo"></a>
     <nav class="main-nav">
-      <a href="index.html#services">Services</a>
-      <a href="calculateur-devis.html">Devis express</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="actualites.html">Actualités</a>
-      <a href="applications.html" aria-current="page">Applications</a>
-      <a href="faq.html">FAQ</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="index.html#services">Services</a><a href="calculateur-devis.html">Devis express</a><a href="a-propos.html">À propos</a><a href="actualites.html">Actualités</a><a href="applications.html" aria-current="page">Applications</a><a href="faq.html">FAQ</a><a href="index.html#contact">Contact</a>
     </nav>
     <a class="btn btn-primary btn-small" href="index.html#contact">Signaler un problème</a>
   </div>
 </header>
 <main>
-<section class="apps-hero">
-  <div class="wrap">
-    <div class="apps-eyebrow">Centre de téléchargement</div>
-    <h1>Nos applications</h1>
-    <p>Téléchargez ici les logiciels officiels développés et distribués par TekaTech Congo. Utilisez toujours cette page pour obtenir la version officielle.</p>
-  </div>
-</section>
-<section class="apps-section">
-  <div class="wrap">
-    <article class="app-card">
-      <div class="app-icon" aria-hidden="true">T</div>
-      <div>
-        <h2>TekaTech Congo Setup</h2>
-        <p>Application officielle TekaTech Congo pour Windows. Téléchargez l'installateur puis lancez-le pour commencer l'installation.</p>
-        <div class="app-meta"><span>Version 1.0.0</span><span>Windows</span><span>Installateur .exe</span></div>
-      </div>
-      <div class="download-box">
-        <a class="btn btn-primary" href="downloads/TekaTech-Congo-Setup-1.0.0.exe" download>Télécharger</a>
-        <small>Version officielle • ~79 Mo</small>
-      </div>
-    </article>
-
-    <article class="app-card" style="margin-top:24px">
-      <div class="app-icon" aria-hidden="true">L</div>
-      <div>
-        <h2>TekaTech Congo — Linux</h2>
-        <p>Application officielle TekaTech Congo pour Linux. Téléchargez le fichier AppImage, autorisez son exécution puis ouvrez-le directement.</p>
-        <div class="app-meta"><span>Version 1.0.0</span><span>Linux</span><span>AppImage</span></div>
-      </div>
-      <div class="download-box">
-        <a class="btn btn-primary" href="downloads/TekaTech-Congo-1.0.0-linux.AppImage" download>Télécharger pour Linux</a>
-        <small>Version officielle • AppImage</small>
-      </div>
-    </article>
-
-    <h2 class="manuals-title">Manuels d'utilisation</h2>
-    <div class="manual-grid">
-      <article class="manual-card">
-        <h3>📱 Application mobile</h3>
-        <p>Guide pour obtenir, installer et utiliser l'application TekaTech Congo sur un téléphone Android.</p>
-        <a class="btn btn-primary btn-small" href="manuels/TekaTech-Congo-Manuel-Mobile.pdf" target="_blank">Lire le manuel</a>
-        <a class="btn btn-secondary btn-small" href="manuels/TekaTech-Congo-Manuel-Mobile.pdf" download>Télécharger PDF</a>
-      </article>
-      <article class="manual-card">
-        <h3>💻 Application desktop</h3>
-        <p>Guide d'installation et d'utilisation de TekaTech Congo sur Windows et Linux.</p>
-        <a class="btn btn-primary btn-small" href="manuels/TekaTech-Congo-Manuel-Desktop.pdf" target="_blank">Lire le manuel</a>
-        <a class="btn btn-secondary btn-small" href="manuels/TekaTech-Congo-Manuel-Desktop.pdf" download>Télécharger PDF</a>
-      </article>
-    </div>
-
-    <div class="apps-note">
-      <strong>Conseil de sécurité :</strong> téléchargez uniquement l'application depuis le site officiel de TekaTech Congo. Lors de l'installation, Windows peut afficher un avertissement pour une nouvelle application ; vérifiez toujours que le fichier provient bien de cette page officielle avant de l'ouvrir.
-    </div>
-  </div>
-</section>
-</main>
+<section class="apps-hero"><div class="wrap"><div class="apps-eyebrow">Centre de téléchargement</div><h1>Nos applications</h1><p>Téléchargez ici les logiciels officiels développés et distribués par TekaTech Congo. Utilisez toujours cette page pour obtenir la version officielle.</p></div></section>
+<section class="apps-section"><div class="wrap">
+<article class="app-card"><div class="app-icon" aria-hidden="true">T</div><div><h2>TekaTech Congo Setup</h2><p>Application officielle TekaTech Congo pour Windows. Téléchargez l'installateur puis lancez-le pour commencer l'installation.</p><div class="app-meta"><span>Version 1.0.0</span><span>Windows</span><span>Installateur .exe</span></div></div><div class="download-box"><a class="btn btn-primary" href="downloads/TekaTech-Congo-Setup-1.0.0.exe" download>Télécharger</a><small>Version officielle • ~79 Mo</small></div></article>
+<article class="app-card" style="margin-top:24px"><div class="app-icon" aria-hidden="true">L</div><div><h2>TekaTech Congo — Linux</h2><p>Application officielle TekaTech Congo pour Linux. Téléchargez le fichier AppImage, autorisez son exécution puis ouvrez-le directement.</p><div class="app-meta"><span>Version 1.0.0</span><span>Linux</span><span>AppImage</span></div></div><div class="download-box"><a class="btn btn-primary" href="downloads/TekaTech-Congo-1.0.0-linux.AppImage" download>Télécharger pour Linux</a><small>Version officielle • AppImage</small></div></article>
+<article class="app-card" style="margin-top:24px"><div class="app-icon" aria-hidden="true">A</div><div><h2>TekaTech Congo — Android</h2><p>Application mobile officielle TekaTech Congo pour Android. Téléchargez l'APK puis installez-le sur votre téléphone Android.</p><div class="app-meta"><span>Version 1.0.0</span><span>Android</span><span>APK</span></div></div><div class="download-box"><a class="btn btn-primary" href="downloads/TekaTech-Congo-Mobile-1.0.0.apk" download>Télécharger pour Android</a><small>Version officielle • ~23,6 Mo</small></div></article>
+<article class="app-card" style="margin-top:24px"><div class="app-icon" aria-hidden="true">i</div><div><h2>TekaTech Congo — iOS</h2><p>Build iOS de l'application mobile TekaTech Congo. L'archive permet de récupérer le build pour les tests et l'installation via Xcode sur Mac.</p><div class="app-meta"><span>Version 1.0.0</span><span>iOS</span><span>Archive .zip</span></div></div><div class="download-box"><a class="btn btn-primary" href="downloads/TekaTech-Congo-iOS-1.0.0.zip" download>Télécharger pour iOS</a><small>Build de test • non signé • ~8,6 Mo</small></div></article>
+<h2 class="manuals-title">Manuels d'utilisation</h2><div class="manual-grid">
+<article class="manual-card"><h3>📱 Application mobile</h3><p>Guide pour obtenir, installer et utiliser l'application TekaTech Congo sur un téléphone Android.</p><a class="btn btn-primary btn-small" href="manuels/TekaTech-Congo-Manuel-Mobile.pdf" target="_blank">Lire le manuel</a><a class="btn btn-secondary btn-small" href="manuels/TekaTech-Congo-Manuel-Mobile.pdf" download>Télécharger PDF</a></article>
+<article class="manual-card"><h3>💻 Application desktop</h3><p>Guide d'installation et d'utilisation de TekaTech Congo sur Windows et Linux.</p><a class="btn btn-primary btn-small" href="manuels/TekaTech-Congo-Manuel-Desktop.pdf" target="_blank">Lire le manuel</a><a class="btn btn-secondary btn-small" href="manuels/TekaTech-Congo-Manuel-Desktop.pdf" download>Télécharger PDF</a></article>
+</div>
+<div class="apps-note"><strong>Conseil de sécurité :</strong> téléchargez uniquement l'application depuis le site officiel de TekaTech Congo. Lors de l'installation, Windows ou Android peut afficher un avertissement pour une nouvelle application ; vérifiez toujours que le fichier provient bien de cette page officielle avant de l'ouvrir. <strong>iOS :</strong> le fichier proposé est un build de test non signé et nécessite une installation via Xcode sur Mac.</div>
+</div></section></main>
 <footer class="site-footer"><div class="wrap"><p>© TekaTech Congo — INFOTELCOM. Tous droits réservés.</p></div></footer>
 <script src="script.js"></script>
 </body>
