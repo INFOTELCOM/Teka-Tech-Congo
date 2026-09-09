@@ -1,0 +1,44 @@
+name: Publish Android 1.1.1 APK
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/publish-android-1-1-1.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website
+        uses: actions/checkout@v6
+
+      - name: Download Android 1.1.1 artifact
+        run: |
+          mkdir -p /tmp/tt111
+          curl -L --fail \
+            -H 'Accept: application/vnd.github+json' \
+            -H 'X-GitHub-Api-Version: 2026-03-10' \
+            'https://api.github.com/repos/INFOTELCOM/Tekatech-congo-mobile/actions/artifacts/10117984808/zip' \
+            -o /tmp/tt111/artifact.zip
+          unzip -o /tmp/tt111/artifact.zip -d /tmp/tt111/extracted
+          APK=$(find /tmp/tt111/extracted -type f -name 'app-release.apk' -print -quit)
+          test -n "$APK"
+          cp "$APK" downloads/TekaTech-Congo-Mobile-1.1.1.apk
+          ls -lh downloads/TekaTech-Congo-Mobile-1.1.1.apk
+
+      - name: Commit Android 1.1.1 APK
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add downloads/TekaTech-Congo-Mobile-1.1.1.apk
+          if git diff --cached --quiet; then
+            echo 'APK already present; nothing to commit.'
+          else
+            git commit -m 'Publish TekaTech Congo Android 1.1.1 APK'
+            git push
+          fi
