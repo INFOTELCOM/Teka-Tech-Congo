@@ -1,6 +1,11 @@
 {
-  "version": "1.0.1",
-  "apk_url": "https://teka-tech-congo.netlify.app/downloads/TekaTech-Congo-Mobile-1.0.1.apk",
-  "force_update": false,
-  "message": "Améliorations et corrections de la version 1.0.1 de TekaTech Congo."
+  "android": {
+    "version": "1.0.1",
+    "url": "https://teka-tech-congo.netlify.app/downloads/TekaTech-Congo-Mobile-1.0.1.apk"
+  },
+  "ios": {
+    "version": "1.0.1",
+    "url": "https://teka-tech-congo.netlify.app/applications.html"
+  },
+  "message": "Une nouvelle version de TekaTech Congo est disponible."
 }
