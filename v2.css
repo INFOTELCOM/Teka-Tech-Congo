@@ -1,0 +1,17 @@
+/* TekaTech Congo V2 visual layer */
+html{scroll-behavior:smooth;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+body{font-synthesis:none;overflow-x:hidden}
+img{max-width:100%}
+section[id]{scroll-margin-top:90px}
+.site-header{background:rgba(255,255,255,.92);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom-color:rgba(221,228,239,.82)}
+.hero{background:radial-gradient(circle at 12% 15%,rgba(30,111,224,.13),transparent 32%),radial-gradient(circle at 85% 70%,rgba(0,149,67,.08),transparent 28%),linear-gradient(135deg,#f8fbff 0%,#eef5ff 55%,#f7fbff 100%)}
+.hero::after{content:'';position:absolute;right:-140px;bottom:-220px;width:520px;height:520px;border-radius:50%;border:1px solid rgba(30,111,224,.13);box-shadow:0 0 0 35px rgba(30,111,224,.035),0 0 0 90px rgba(30,111,224,.02);pointer-events:none}
+.hero-canvas{opacity:.35}.hero h1{letter-spacing:-.035em}
+.hero-panel{background:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.9);border-radius:24px;box-shadow:0 28px 70px -32px rgba(18,58,115,.48);backdrop-filter:blur(14px)}
+.panel-row{padding:14px 12px;border-radius:14px;background:rgba(245,248,252,.68)}.panel-row+.panel-row{border-top:0}.panel-dot{box-shadow:0 0 0 6px rgba(63,169,245,.12)}
+.service-card{border-radius:20px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}.service-card::before{width:100%;opacity:.9}.service-card::after{content:'';position:absolute;width:100px;height:100px;right:-48px;top:-48px;border-radius:50%;background:rgba(30,111,224,.08)}
+.service-card:nth-child(1)::after{background:rgba(0,149,67,.1)}.service-card:nth-child(3)::after{background:rgba(206,17,38,.08)}.service-card:nth-child(4)::after{background:rgba(255,203,5,.14)}
+.service-card:hover{transform:translateY(-7px);box-shadow:0 26px 50px -30px rgba(18,58,115,.48);border-color:#bfd3ef}.service-card h3{margin-top:18px}
+.steps li{padding:22px;background:var(--bg);border:1px solid var(--line);border-radius:18px}.contact-form{border-radius:20px}.gallery-item{border-radius:18px}
+.page-hero,.content-hero{position:relative;overflow:hidden}.page-hero::before,.content-hero::before{content:'';position:absolute;width:360px;height:360px;border-radius:50%;right:-130px;top:-150px;background:radial-gradient(circle,rgba(30,111,224,.14),transparent 68%);pointer-events:none}
+@media(max-width:640px){.hero::after{display:none}.hero-panel{border-radius:18px}.service-card{border-radius:18px}}
