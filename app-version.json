@@ -1,11 +1,11 @@
 {
   "android": {
-    "version": "1.1.1",
-    "url": "https://raw.githubusercontent.com/INFOTELCOM/Tekatech-congo-mobile/release/1.1.0/release-assets/TekaTech-Congo-Mobile-1.1.1.apk"
+    "version": "1.1.5",
+    "url": "https://raw.githubusercontent.com/INFOTELCOM/Tekatech-congo-mobile/release/1.1.0/release-assets/TekaTech-Congo-Mobile-1.1.5.apk"
   },
   "ios": {
     "version": "1.0.2",
     "url": "https://teka-tech-congo.netlify.app/applications.html"
   },
-  "message": "Nouvelle version disponible : le suivi d’intervention a été amélioré dans TekaTech Congo."
+  "message": "Nouvelle version de TekaTech Congo disponible : Android 1.1.5."
 }
